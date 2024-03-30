@@ -4,7 +4,7 @@ import TaskList from './components/TaskList';
 const App = () => {
   return (
     <div>
-      <h1>Task Scheduler</h1>
+      <h1>Task Manager</h1>
       <TaskInput />
       <TaskList />
     </div>
