@@ -1,0 +1,148 @@
+*{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+html,body{
+  background-color:black;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+}
+.list-container {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    margin-bottom: 12px;
+    background-color:grey;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .list-item:hover {
+    background-color:gold;
+    cursor: pointer;
+  }
+  
+  .list-item.completed {
+    background-color:greenyellow;
+  }
+  
+  .list-item.completed:hover {
+    background-color:greenyellow;
+  }
+  
+  .list-item span {
+    cursor: pointer;
+  }
+  
+  .list-item span.completed {
+    text-decoration: line-through;
+    color: #6c757d;
+  }
+  
+  .list-item button {
+    /* background-color:#007bff; */
+    /* color: #fff; */
+    border: none;
+    /* border-radius: 4px; */
+    padding: 5px 10px;
+    cursor: pointer;
+    /* transition: background-color 0.3s ease; */
+  }
+  
+  /* .list-item button:hover {
+    background-color:green;
+  } */
+  .task{
+    margin-right: 10px;
+  }
+  /* .task:hover{
+    background-color: green;
+  }
+  .delete:hover{
+    background-color: red;
+  } */
+
+
+  .task-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .task-list li {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+  }
+
+  .delete,
+.complete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Style for the dustbin icon */
+.delete .svg-inline--fa {
+  font-size: 24px;
+  color: red; /* Adjust the color as needed */
+}
+
+/* Style for the checkbox icon */
+/* .complete .svg-inline--fa {
+  color: transparent;
+  font-size: 24px;
+  border: 1px solid black;
+} */
+.checkbox-icon {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  margin-right: 5px;
+}
+
+.checked .checkbox-icon{
+  color: darkgreen;
+}
+
+
+.checkbox-icon.unchecked {
+  color: transparent; /* Make the checkbox icon transparent */
+  border-color: black; /* Black border around the unchecked checkbox */
+}
+
+
+  /* Media queries for responsiveness */
+  @media (max-width: 767px) {
+    .task-list li {
+      font-size: 14px;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .task-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .task-list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .task-list li {
+      flex-basis: calc(33.33% - 20px); /* Adjust based on your layout */
+    }
+  }
