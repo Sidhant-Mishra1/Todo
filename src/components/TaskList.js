@@ -2,8 +2,11 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteTask, toggleTask } from '../actions/taskActions';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faTrashAlt, faCheckSquare, faSquare } from '@fortawesome/free-solid-svg-icons';
 import { faTrashAlt, faCheckSquare, faSquare } from '@fortawesome/free-solid-svg-icons';
 import './TaskList.css';
+
+
 
 const TaskList = () => {
   const tasks = useSelector((state) => state.tasks);
